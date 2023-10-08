@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
+import { ContactForm } from './ContactForm/ContactForm';
+import { Filter } from './Filter/Filter';
 
 export class App extends Component {
   state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
+    contacts: [],
+    filter: '',
+  };
+
+  addContact = newContact => {
+    this.setState({
+      contacts: newContact,
+    });
   };
 
   render() {
-    return <>Test</>;
+    console.log(this.state);
+    return (
+      <div>
+        <h1>Phonebook</h1>
+        <ContactForm onAdd={this.addContact} />
+
+        <h2>Contacts</h2>
+        <Filter />
+      </div>
+    );
   }
 }
