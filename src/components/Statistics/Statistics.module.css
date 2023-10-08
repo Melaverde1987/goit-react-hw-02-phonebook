@@ -1,0 +1,14 @@
+.container {
+  border: 1px solid var(--colorBorder);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.underline {
+  color: var(--colorPrimary);
+  font-weight: 600;
+}
