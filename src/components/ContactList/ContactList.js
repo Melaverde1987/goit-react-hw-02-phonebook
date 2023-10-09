@@ -1,17 +1,24 @@
 import { ContactListItem } from '../ContactListItem/ContactListItem';
 
-export const ContactList = ({ contacts }) => {
-  console.log('contacts', contacts);
-
+export const ContactList = ({ contacts, onDelete }) => {
   if (contacts !== undefined) {
     return (
       <ul>
         {contacts.map(contact => (
-          <ContactListItem
-            key={contact.id}
-            contactName={contact.name}
-            contactNumber={contact.number}
-          ></ContactListItem>
+          <li key={contact.id}>
+            <ContactListItem
+              contactName={contact.name}
+              contactNumber={contact.number}
+            ></ContactListItem>
+            <button
+              type="button"
+              id={contact.name}
+              className="btn btn-primary"
+              onClick={onDelete}
+            >
+              Delete
+            </button>
+          </li>
         ))}
       </ul>
     );

@@ -1,7 +1,8 @@
 export const ContactListItem = ({ contactName, contactNumber }) => {
   return (
-    <li>
-      {contactName}: {contactNumber}
-    </li>
+    <p>
+      <span>{contactName}: </span>
+      <span>{contactNumber}</span>
+    </p>
   );
 };
