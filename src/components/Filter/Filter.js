@@ -8,7 +8,7 @@ export class Filter extends Component {
         <p>Find contacts by name</p>
         <Formik
           initialValues={{
-            name: '',
+            search: '',
           }}
           onSubmit={(values, actions) => {
             console.log(values);
@@ -16,12 +16,14 @@ export class Filter extends Component {
           }}
         >
           <Form>
-            <label htmlFor="name">Name</label>
-            <Field id="name" name="name" placeholder="John Doe" />
-
-            <button type="submit" className="btn btn-primary">
-              Find
-            </button>
+            <label htmlFor="search">Name</label>
+            <Field
+              id="search"
+              name="search"
+              placeholder="John Doe"
+              value={this.props.inputValue}
+              onChange={this.props.handleChange}
+            />
           </Form>
         </Formik>
       </div>
