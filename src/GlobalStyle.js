@@ -9,7 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0.5em;
     font-weight: 600;
     }
 

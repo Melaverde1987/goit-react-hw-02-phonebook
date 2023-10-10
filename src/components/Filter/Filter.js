@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Formik, Field, Form } from 'formik';
+import { FilterContainer } from './Filter.styled';
 
 export class Filter extends Component {
   render() {
     return (
-      <div>
+      <FilterContainer>
         <p>Find contacts by name</p>
         <Formik
           initialValues={{
@@ -16,17 +17,19 @@ export class Filter extends Component {
           }}
         >
           <Form>
-            <label htmlFor="search">Name</label>
-            <Field
-              id="search"
-              name="search"
-              placeholder="John Doe"
-              value={this.props.inputValue}
-              onChange={this.props.handleChange}
-            />
+            <div className="container">
+              <label htmlFor="search">Name</label>
+              <Field
+                id="search"
+                name="search"
+                placeholder="John Doe"
+                value={this.props.inputValue}
+                onChange={this.props.handleChange}
+              />
+            </div>
           </Form>
         </Formik>
-      </div>
+      </FilterContainer>
     );
   }
 }

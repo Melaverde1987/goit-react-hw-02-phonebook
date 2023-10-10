@@ -7,10 +7,7 @@ const SignupSchema = Yup.object().shape({
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
     .required('Required'),
-  number: Yup.number()
-    .min(2, 'Too Short!')
-    .max(16, 'Too Long!')
-    .required('Required'),
+  number: Yup.number().min(2, 'Too Short!').required('Required'),
 });
 
 export const ContactForm = ({ onAdd }) => {

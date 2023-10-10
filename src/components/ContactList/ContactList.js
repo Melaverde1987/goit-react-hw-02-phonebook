@@ -2,7 +2,7 @@ import { ContactListItem } from '../ContactListItem/ContactListItem';
 import { List, ListItem } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onDelete }) => {
-  if (contacts !== undefined) {
+  if (contacts != '') {
     return (
       <List>
         {contacts.map(contact => (
