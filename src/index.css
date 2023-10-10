@@ -95,12 +95,32 @@ body {
 .btn.btn-primary {
   background-color: var(--colorPrimary);
   color: var(--white);
-  transition: box-shadow var(--cubic-transition), color var(--cubic-transition);
+  transition: box-shadow var(--cubic-transition),
+    background-color var(--cubic-transition);
 }
 
-.btn.btn-primary:hover,
-.btn.btn-primary:focus {
+.btn.btn-primary:hover {
   box-shadow: rgba(0, 0, 0, 0.48) 0 4px 12px;
+}
+
+.btn.btn-primary:focus {
+  background-color: var(--colorPrimaryDark);
+}
+
+.btn.btn-outline {
+  border: 1px solid var(--colorPrimary);
+  color: var(--colorPrimary);
+  transition: box-shadow var(--cubic-transition), border var(--cubic-transition),
+    color var(--cubic-transition);
+}
+
+.btn.btn-outline:hover {
+  box-shadow: rgba(0, 0, 0, 0.48) 0 4px 12px;
+}
+
+.btn.btn-outline:focus {
+  border: 1px solid var(--colorPrimaryDark);
+  color: var(--colorPrimaryDark);
 }
 
 :root {
@@ -113,6 +133,7 @@ body {
   --black: #000000;
 
   --colorPrimary: #6200ee;
+  --colorPrimaryDark: #4a01af;
   --colorSecondary: #303030;
   --colorText: #141414;
   --colorBody: #eaedee;

@@ -66,7 +66,7 @@ export class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <div>
+      <div className="card">
         <h1>Phonebook</h1>
         <ContactForm onAdd={this.addContact} />
 

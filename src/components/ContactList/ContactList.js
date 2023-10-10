@@ -1,11 +1,12 @@
 import { ContactListItem } from '../ContactListItem/ContactListItem';
+import { List, ListItem } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onDelete }) => {
   if (contacts !== undefined) {
     return (
-      <ul>
+      <List>
         {contacts.map(contact => (
-          <li key={contact.id}>
+          <ListItem key={contact.id}>
             <ContactListItem
               contactName={contact.name}
               contactNumber={contact.number}
@@ -13,14 +14,14 @@ export const ContactList = ({ contacts, onDelete }) => {
             <button
               type="button"
               id={contact.name}
-              className="btn btn-primary"
+              className="btn btn-outline"
               onClick={onDelete}
             >
               Delete
             </button>
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     );
   }
 };
